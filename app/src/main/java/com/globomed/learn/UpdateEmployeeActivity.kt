@@ -92,7 +92,7 @@ class UpdateEmployeeActivity : AppCompatActivity() {
             DataManager.updateEmployee(databaseHelper, updatedEmployee)
             setResult(Activity.RESULT_OK, Intent())
             Toast.makeText(this, "Employee updated", Toast.LENGTH_LONG).show()
-            Log.d("Employee", "updated")
+           // Log.d("Employee", "updated")
             finish()
         }
     }
@@ -127,7 +127,7 @@ class UpdateEmployeeActivity : AppCompatActivity() {
                         val result = DataManager.deleteEmployee(databaseHelper, empId.toString())
 
                         Toast.makeText(this, "record deleted", Toast.LENGTH_LONG).show()
-                        Log.d("record","deleted")
+                       // Log.d("record","deleted")
                         setResult(Activity.RESULT_OK, Intent())
                         finish()
 

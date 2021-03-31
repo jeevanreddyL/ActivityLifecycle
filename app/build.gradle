@@ -17,11 +17,33 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs{
+        release{
+            storeFile file("keystore.jks")
+            storePassword "Jeevan32@"
+            keyAlias "Globomed"
+            keyPassword "Jeevan32@"
 
+        }
+    }
+    flavorDimensions "price"
+productFlavors{
+    free{
+        applicationId "com.globomed.learn.free"
+    }
+    paid{
+        applicationId "com.globomed.learn.paid"
+    }
+}
     buildTypes {
         release {
-            minifyEnabled false
+            shrinkResources true
+            minifyEnabled true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            applicationIdSuffix ".debug"
         }
     }
     compileOptions {

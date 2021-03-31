@@ -54,7 +54,7 @@ class Sqlite : AppCompatActivity() {
                         val result = DataManager.deleteAllEmployee(databaseHelper)
 
                         Toast.makeText(this, "record deleted", Toast.LENGTH_LONG).show()
-                        Log.d("record","deleted")
+                        //Log.d("record","deleted")
                         setResult(Activity.RESULT_OK, Intent())
                         finish()
 
