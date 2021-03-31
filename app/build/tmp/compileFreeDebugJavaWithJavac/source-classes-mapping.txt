@@ -1,0 +1,2 @@
+com/globomed/learn/BuildConfig.java
+ com.globomed.learn.BuildConfig
